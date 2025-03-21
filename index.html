@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulk Excel File Rename</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script defer src="script.js"></script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+      #drop-zone {
+        border: 2px dashed #007bff;
+        padding: 20px;
+        cursor: pointer;
+        width: 50%;
+        margin: auto;
+      }
+      #file-list,
+      #excluded-list {
+        text-align: left;
+        max-width: 600px;
+        margin: 20px auto;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        margin: 5px 0;
+        padding: 5px;
+        border-radius: 5px;
+      }
+      .success {
+        background: #d4edda;
+        color: #155724;
+      }
+      .error {
+        background: #f8d7da;
+        color: #721c24;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Drag & Drop Your Excel Files Here</h2>
+    <div id="drop-zone">Drop Files Here or Click to Select</div>
+    <input type="file" id="file-input" multiple style="display: none" />
+
+    <h3>Renamed Files:</h3>
+    <ul id="file-list"></ul>
+
+    <h3>Excluded Files:</h3>
+    <ul id="excluded-list"></ul>
+  </body>
+</html>
